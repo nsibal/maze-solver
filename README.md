@@ -51,7 +51,7 @@ class Grid {
 The **class** is already created with a helper **function** to print the **array** *assigned* to `this.grid`. Your task is to create a *copy* of the input **array** `arr` and *assign* it to `this.grid`.
 
 
-#### 2. Creating a random maze
+#### 2. Creating random maze
 Sometimes, there won’t be an **array** to give to the **constructor**. So, we want our **class** to generate a *random* **two-dimensional array** instead.
 
 ```javascript
