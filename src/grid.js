@@ -1,16 +1,16 @@
 module.exports = class Grid {
   constructor (arr) {
-    var _undefDimension = 6;
-    var _randomValues = 2;
+    let _undefDimension = 6;
+    let _randomValues = 2;
     this.grid = arr === undefined ? _randomArr() : _deepCopiedArr();
 
     function _randomArr() {
-      var locArr = new Array(_undefDimension);
+      let locArr = new Array(_undefDimension);
 
-      for (var i = 0; i < _undefDimension; i++) {
+      for (let i = 0; i < _undefDimension; i++) {
         var row = new Array(_undefDimension);
 
-        for (var j = 0; j < _undefDimension; j++) {
+        for (let j = 0; j < _undefDimension; j++) {
           row[j] = getRandomInt(_randomValues);
         }
 
@@ -25,7 +25,7 @@ module.exports = class Grid {
     }
 
     function _deepCopiedArr () {
-      var locArr = new Array(arr.length);
+      let locArr = new Array(arr.length);
 
       arr.forEach((row, i) => {
         locArr[i] = Array.from(row);
@@ -36,8 +36,8 @@ module.exports = class Grid {
   }
 
   printArray () {
-    for (var row of this.grid) {
-      for (var ele of row) {
+    for (let row of this.grid) {
+      for (let ele of row) {
         process.stdout.write(ele === 0 ? `X ` : `O `);
       }
       console.log('');
