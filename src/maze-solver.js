@@ -11,4 +11,16 @@ module.exports = class MazeSolver extends Grid {
     if (this.grid[x][y] === 0) return false;
     return true;
   }
+
+  getNeighbors (x, y) {
+    let up = [x, y - 1];
+    let down = [x, y + 1];
+    let left = [x - 1, y];
+    let right = [x + 1, y];
+
+    return [up, down, left, right].filter(neighbor => {
+      let [x, y] = neighbor;
+      return this.canTraverse(x, y);
+    });
+  }
 }
