@@ -1,6 +1,28 @@
 class Grid {
   constructor (arr) {
-    this.grid = _deepCopiedArr();
+    var _undefDimension = 6;
+    var _randomValues = 2;
+    this.grid = arr === undefined ? _randomArr() : _deepCopiedArr();
+
+    function _randomArr() {
+      var locArr = new Array(_undefDimension);
+
+      for (var i = 0; i < _undefDimension; i++) {
+        var row = new Array(_undefDimension);
+
+        for (var j = 0; j < _undefDimension; j++) {
+          row[j] = getRandomInt(_randomValues);
+        }
+
+        locArr[i] = row;
+      }
+
+      return locArr;
+    }
+
+    function getRandomInt (randomValues) {
+      return Math.floor(Math.random() * Math.floor(randomValues));
+    }
 
     function _deepCopiedArr () {
       var locArr = new Array(arr.length);
