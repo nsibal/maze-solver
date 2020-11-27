@@ -23,4 +23,11 @@ module.exports = class MazeSolver extends Grid {
       return this.canTraverse(x, y);
     });
   }
+
+  checkVisited (x, y, visited) {
+    for (var pair of visited) {
+      if (x === pair[0] && y === pair[1]) return true;
+    }
+    return false;
+  }
 }
