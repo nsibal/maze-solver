@@ -1,4 +1,4 @@
-class Grid {
+module.exports = class Grid {
   constructor (arr) {
     var _undefDimension = 6;
     var _randomValues = 2;
