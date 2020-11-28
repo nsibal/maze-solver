@@ -11,13 +11,13 @@ Outline to a series of problems that will be solved with a maze solver.
 - [Background](#background)
 - [Task](#task)
   - [Sub-tasks](#sub-tasks)
-      1. [Creating a maze](#1-creating-a-maze)
-      2. [Creating random maze](#2-creating-random-maze)
-      3. [Creating MazeSolver](#3-creating-mazesolver)
-      4. [Finding traversable indices](#4-finding-traversable-indices)
-      5. [Finding neighboring traversable indices](#5-finding-neighboring-traversable-indices)
-      6. [Checking if an index is already visited](#6-checking-if-an-index-is-already-visited)
-      7. [Final step to check if a maze is solvable](#7-final-step-to-check-if-a-maze-is-solvable)
+    1. [Creating a maze](#1-creating-a-maze)
+    2. [Creating random maze](#2-creating-random-maze)
+    3. [Creating MazeSolver](#3-creating-mazesolver)
+    4. [Finding traversable indices](#4-finding-traversable-indices)
+    5. [Finding neighboring traversable indices](#5-finding-neighboring-traversable-indices)
+    6. [Checking if an index is already visited](#6-checking-if-an-index-is-already-visited)
+    7. [Final step to check if a maze is solvable](#7-final-step-to-check-if-a-maze-is-solvable)
 
 
 ## Background
@@ -25,10 +25,10 @@ A gaming company **YAMCO** created a game called **Mind the App** where players 
 
 
 ## Task
-Use your **JavaScript** knowledge to create a solution which tells if a given maze is or is not solvable. This way, the **chief of designers** can prevent her team from wasting their time on failed mazes.  
-    
+Use your **JavaScript** knowledge to create a solution which tells if a given maze is or is not solvable. This way, the **chief of designers** can prevent her team from wasting their time on failed mazes.
+
 ![How people are connected with one another](./assets/task.jpg "How people are connected with one another")
-  
+
 The above illustration shows the look of a maze. Make a **JavaScript** version of the maze so it can tell whether the maze is solvable or not.
 
 
@@ -41,10 +41,10 @@ Because we need **JavaScript** to understand the maze, use a **two-dimensional a
 
 ```javascript
 class Grid {
-	constructor (arr) {
-		this.grid; // copy of arr
-		this.printArray; // method to print this.grid
-	}
+  constructor (arr) {
+    this.grid; // copy of arr
+    this.printArray; // method to print this.grid
+  }
 }
 ```
 
@@ -56,10 +56,10 @@ Sometimes, there won’t be an **array** to give to the **constructor**. So, we 
 
 ```javascript
 class Grid {
-	constructor (arr) {
-		this.grid; // random array when arr is undefined
-		this.printArray; // method to print this.grid
-	}
+  constructor (arr) {
+    this.grid; // random array when arr is undefined
+    this.printArray; // method to print this.grid
+  }
 }
 ```
 
@@ -71,10 +71,10 @@ To solve the maze, create a **class** `MazeSolver`.
 
 ```javascript
 class MazeSolver {
-	constructor (arr) {
-		this.grid; // assigned to an array depending on arr value
-		this.printArray; // method to print this.grid
-	}
+  constructor (arr) {
+    this.grid; // assigned to an array depending on arr value
+    this.printArray; // method to print this.grid
+  }
 }
 ```
 
@@ -86,11 +86,11 @@ Before traversing any *index*, make sure that a given *index* is valid. For this
 
 ```javascript
 class MazeSolver {
-	constructor (arr) {
-		this.grid; // assigned to an array depending on arr value
-		this.printArray; // method to print this.grid
-		this.canTraverse; // method to see if (x,y) are traversable in this.grid
-	}
+  constructor (arr) {
+    this.grid; // assigned to an array depending on arr value
+    this.printArray; // method to print this.grid
+    this.canTraverse; // method to see if (x,y) are traversable in this.grid
+  }
 }
 ```
 
@@ -102,12 +102,12 @@ For any *index* in the **two-dimensional array** (`this.grid`), we need to know 
 
 ```javascript
 class MazeSolver {
-	constructor (arr) {
-		this.grid; // assigned to an array depending on arr value
-		this.printArray; // method to print this.grid
-		this.canTraverse; // method to see if (x,y) are traversable in this.grid
-		this.getNeighbors; // method to get a list of traversable neighbors
-	}
+  constructor (arr) {
+    this.grid; // assigned to an array depending on arr value
+    this.printArray; // method to print this.grid
+    this.canTraverse; // method to see if (x,y) are traversable in this.grid
+    this.getNeighbors; // method to get a list of traversable neighbors
+  }
 }
 ```
 
@@ -119,13 +119,13 @@ While traversal, we may visit the same indices again and again. To prevent this,
 
 ```javascript
 class MazeSolver {
-	constructor (arr) {
-		this.grid; // assigned to an array depending on arr value
-		this.printArray; // method to print this.grid
-		this.canTraverse; // method to see if (x,y) are traversable in this.grid
-		this.getNeighbors; // method to get a list of traversable neighbors
-		this.checkVisited; // method to check if an index is visited
-	}
+  constructor (arr) {
+    this.grid; // assigned to an array depending on arr value
+    this.printArray; // method to print this.grid
+    this.canTraverse; // method to see if (x,y) are traversable in this.grid
+    this.getNeighbors; // method to get a list of traversable neighbors
+    this.checkVisited; // method to check if an index is visited
+  }
 }
 ```
 
@@ -137,14 +137,14 @@ With all **helper methods** and a maze ready, we can finally implement a solutio
 
 ```javascript
 class MazeSolver {
-	constructor (arr) {
-		this.grid; // assigned to an array depending on arr value
-		this.printArray; // method to print this.grid
-		this.canTraverse; // method to see if (x,y) are traversable in this.grid
-		this.getNeighbors; // method to get a list of traversable neighbors
-		this.checkVisited; // method to check if an index is visited
-		this.solve; // method to try solving the maze with source and target indices
-	}
+  constructor (arr) {
+    this.grid; // assigned to an array depending on arr value
+    this.printArray; // method to print this.grid
+    this.canTraverse; // method to see if (x,y) are traversable in this.grid
+    this.getNeighbors; // method to get a list of traversable neighbors
+    this.checkVisited; // method to check if an index is visited
+    this.solve; // method to try solving the maze with source and target indices
+  }
 }
 ```
 
